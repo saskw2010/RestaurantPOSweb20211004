@@ -1,0 +1,32 @@
+﻿        span.dropt {border-bottom: thin dotted; background: #ffeedd;}
+        span.dropt:hover {text-decoration: none; background: #ffffff; z-index: 6; }
+        span.dropt span {position: absolute; left: -99px;
+          margin: 20px 0 0 0px; padding: 3px 3px 3px 3px;
+          border-style:solid; border-color:black; border-width:1px; z-index: 6;}
+        span.dropt:hover span {left: -3%; top: 34%; background: #ffffff;} 
+        span.dropt span {position: absolute; left: -9999px;
+          margin: 4px 0 0 0px; padding: 3px 3px 3px 3px; 
+          border-style:solid; border-color:black; border-width:1px;}
+        span.dropt:hover span {margin: 0px 0 0 225px; background: #ffffff; z-index:6;} 
+
+        span.droptdetailsview {border-bottom: thin dotted; background: #ffeedd;}
+        span.droptdetailsview:hover {text-decoration: none; background: #ffffff; z-index: 6; }
+        span.droptdetailsview span {position: absolute; left: -99px;
+          margin: 10px 0 0 0px; padding: 3px 3px 3px 3px;
+          border-style:solid; border-color:black; border-width:1px; z-index: 6;}
+        span.droptdetailsview:hover span {left: -3%; top: 0%; background: #ffffff;} 
+        span.droptdetailsview span {position: absolute; left: -9999px;
+          margin: 4px 0 0 0px; padding: 3px 3px 3px 3px; 
+          border-style:solid; border-color:black; border-width:1px;}
+        span.droptdetailsview:hover span {margin: 0 0 0 475px; background: #ffffff; z-index:6;} 
+
+        span.droptHome {border-bottom: thin dotted; background: #ffeedd;}
+        span.droptHome:hover {text-decoration: none; background: #ffffff; z-index: 6; }
+        span.droptHome span {position: absolute; left: -99px;
+          margin: 10px 0 0 0px; padding: 3px 3px 3px 3px;
+          border-style:solid; border-color:black; border-width:1px; z-index: 6;}
+        span.droptHome:hover span {left: -3%; top: 0; background: #ffffff;} 
+        span.droptHome span {position: absolute; left: -9999px;
+          margin: 4px 0 0 0px; padding: 3px 3px 3px 3px; 
+          border-style:solid; border-color:black; border-width:1px;}
+        span.droptHome:hover span {margin: 0 0 0 250px; background: #ffffff; z-index:6;} 

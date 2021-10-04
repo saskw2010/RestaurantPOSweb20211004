@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master_Ft_page.master.cs" Inherits="MasterPage_Master_Ft_page" %>
+ 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <meta charset="utf-8">
+  <title>Sky Restaurant </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Restaurant POS" name="keywords">
+  <meta content="Restaurant POS" name="description">
+  <meta content="Dynamicsoft" name="author">
+  <!-- Favicons -->
+  <link href="../front_asset/img/Restwebicon.png" rel="icon">
+  <link href="../front_asset/img/Restwebicon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../front_asset/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../front_asset/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../front_asset/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../front_asset/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="../front_asset/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../front_asset/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../front_asset/lib/css/style.css" rel="stylesheet">
+    <link href="../Styles/style.css" rel="stylesheet" />
+    <link href="../Styles/modal.css" rel="stylesheet" />
+    <link href="../Styles/primefacesdesign.css" rel="stylesheet" /> 
+    <link href="../Styles/paginationStyle.css" rel="stylesheet" />
+    <link href="../front_asset/lib/bootstrap/css/formcontrolcustom.css" rel="stylesheet" />
+        <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+ 
+</head>
+
+<body>
+    <form runat="server"> 
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header" style="background-color:black">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="../Default.aspx" class="scrollto">My Restaurant </a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+            <li class="menu-active"><a href="../Default.aspx">Home</a></li>
+            <li><a href="../itemmoreview.aspx">Foods</a></li>
+            <li><a href="../Default.aspx#services">Services</a></li>
+            <li><a href="../Default.aspx#about">About Us</a></li>
+            <li class="menu-has-children">
+              
+            <asp:HyperLink ID="lnkmyaccount" runat="server" ForeColor="White">  <span class="fa fa-user"></span> My Account</asp:HyperLink>
+            <ul>
+                <li>  <asp:Label ID="lblaccountno" runat="server" Text=""></asp:Label> </li> 
+                <li>  <a  href="/Customeradmin/Default.aspx"> Profile</a> </li>
+                <li><a  href="/Customeradmin/Orders.aspx"> Orders</a> </li> 
+                <li class="divider"></li>  
+                <li> <asp:LinkButton ID="LinklogOut" runat="server" class="glyphicon glyphicon-off"  OnClick="LinklogOut_Click" > Logout </asp:LinkButton> </li>     
+            </ul>
+          </li>
+          <li><a href="../Contact.aspx">Contact</a></li>
+          <asp:HyperLink ID="lnklogin" runat="server" ForeColor="White" NavigateUrl="~/Login_customer.aspx">Login</asp:HyperLink>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+ 
+<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager> 
+  <main id="main">
+        <br/><br/> 
+    <section id="contact" class="section-bg wow fadeInDown">
+      <div class="container">
+                   	<asp:UpdateProgress ID="UpdateProgress1" runat="server">
+				            <ProgressTemplate> 
+				                <div style="position: relative; top: 30%; text-align: center;" >
+					        <asp:Image  ID="Image1" runat="server" style="vertical-align: middle" 
+					            alt="Loading..."  ImageUrl="~/globalRes/homeimg/input-spinner.gif"      /> 
+				            </div>                                     
+				            </ProgressTemplate>
+			            </asp:UpdateProgress> 
+	 
+		                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+			            <ContentTemplate>
+		                    <asp:ContentPlaceHolder id="MainContent" runat="server">        
+                            </asp:ContentPlaceHolder>
+                            </ContentTemplate>
+		            </asp:UpdatePanel>
+  
+       </div>
+    </section>
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>My Resto </h3>
+            <p> Restaurant POS is C#, WPF , XAML, SQL based Desktop application.
+	    On-Screen Touch Keyboard support. Seller can select first table zone and place order Kitchen display shows Kitchen items. 
+	    Supported most major native languages:  </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="../Login_customer.aspx">Login</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              122 Timple Street <br/>
+              New York, NY 10013<br/>
+              United States <br/>
+              <strong>Phone:</strong> +1 555  666 7799<br/>
+              <strong>Email:</strong> info@example.com<br/>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            
+              <input type="email" name="email"><input type="submit"  value="Subscribe">
+         
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>whitesky  Solutions</strong>. All Rights Reserved
+      </div>
+    
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="../front_asset/lib/jquery/jquery.min.js"></script>
+  <script src="../front_asset/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../front_asset/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../front_asset/lib/easing/easing.min.js"></script>
+  <script src="../front_asset/lib/superfish/hoverIntent.js"></script>
+  <script src="../front_asset/lib/superfish/superfish.min.js"></script>
+  <script src="../front_asset/lib/wow/wow.min.js"></script>
+  <script src="../front_asset/lib/waypoints/waypoints.min.js"></script>
+  <script src="../front_asset/lib/counterup/counterup.min.js"></script>
+  <script src="../front_asset/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../front_asset/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="../front_asset/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="../front_asset/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+ 
+
+  <!-- Template Main Javascript File -->
+  <script src="../front_asset/lib/js/main.js"></script>
+    </form>
+</body>
+</html>
+

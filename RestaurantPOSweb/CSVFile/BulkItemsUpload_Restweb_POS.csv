@@ -1,0 +1,4 @@
+ItemCode,ItemName,PurchasePrice,RetailPrice,ItemCategory,Discount,ItemQty,kditem,Description,options,mdate,edate
+8956243,Pizaa_sm,8.5,9.6,Pizza,1.2,26,3,des,"chilli,onion",2018-07-11,2018-10-25
+8956244,Burger,9.5,10.6,Snack foods,0,98,1,ingradients,"sauce,tomato",2018-07-12,2018-10-26
+8956245,single-burger-Lg,10.5,11.6,Snack foods,2.3,100,3,ingradients,"bacon,sauce",2018-07-13,2019-10-27

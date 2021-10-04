@@ -1,0 +1,179 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Bootstrap.master.cs" Inherits="Bootstrap" %>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+   <title>Sky Restaurant Point of Sale | Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%--  <link rel="stylesheet" href="BootStrapFiles/bootstrap.css" media="screen" type="text/css">--%>
+    <link rel="stylesheet" href="../BootStrapFiles/bootswatch.css" type="text/css">
+    <link href="../Styles/tooltipsCSS.css" rel="stylesheet" type="text/css" />
+    <link href="../BootStrapFiles/bootstrap_cerulean.css" rel="stylesheet" type="text/css" />
+     
+        <link href="../front_asset/img/Restwebicon.png" rel="icon">
+        <link href="../front_asset/img/Restwebicon.png" rel="apple-touch-icon">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script type="text/javascript" src="BootStrapFiles/html5shiv.js"></script>
+
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+      <script type="text/javascript" src="BootStrapFiles/respond.min.js"></script>
+    <![endif]-->    
+    <script src="../BootStrapFiles/jquery-1.8.2.js" type="text/javascript"></script>   
+    <link href="../Styles/paginationStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>  
+    <form id="form1" runat="server">
+
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager> 
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">        
+          <a href="~/Dashboard/Default.aspx" runat="server"  class="navbar-brand">Restaurant POS</a>
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>  
+              </button>
+        </div>      
+
+        <div class="navbar-collapse collapse" id="navbar-main">
+
+          <ul class="nav navbar-nav">    
+                 <li> <asp:HyperLink  ID="hlnkSalesRegister"  NavigateUrl="~/Sales/Tableview.aspx" runat="server" ToolTip="Sales Register" > Sales Register</asp:HyperLink></li> 
+                   <li> <asp:HyperLink  ID="HyperLink11"  NavigateUrl="~/Sales/ReturnSales_POS.aspx" runat="server" ToolTip="Return" > Return</asp:HyperLink></li> 
+               
+                <li class="dropdown">
+                  <a class="dropdown-toggle" runat="server" data-toggle="dropdown" href="#" id="A9">Items <span class="caret"></span></a>
+                  <ul class="dropdown-menu" aria-labelledby="themes">    
+                       <li>  <asp:HyperLink ID="HyperLink1" runat="server" class="glyphicon glyphicon-plus" NavigateUrl="~/Items/AddItem.aspx"> Add New Item</asp:HyperLink></li>                      
+                       <li class="divider"></li>
+                       <li>  <asp:HyperLink ID="HyperLink2" runat="server" class="glyphicon glyphicon-list" NavigateUrl="~/Items/ManageItems.aspx"> Manage Items</asp:HyperLink></li>                      
+                        <li class="divider"></li> 
+                       <li>  <asp:HyperLink ID="HyperLink14" runat="server"   class="glyphicon glyphicon-gift"   NavigateUrl="~/Items/AddIngredient.aspx"> Purchase Inventory</asp:HyperLink></li> 
+                        <li class="divider"></li> 
+                        <li>  <asp:HyperLink ID="HyperLink12" runat="server" class="glyphicon glyphicon-upload"  NavigateUrl="~/Items/UploadItems.aspx"> Upload Bulk items</asp:HyperLink></li> 
+                        <li class="divider"></li> 
+                        <li>  <asp:HyperLink ID="HyperLink7" runat="server" class="glyphicon glyphicon-list"  NavigateUrl="~/Items/ItemList.aspx"> Item List</asp:HyperLink></li> 
+                        <li class="divider"></li> <li class="divider"></li> 
+                       <li>  <asp:HyperLink ID="HyperLink3" runat="server"  NavigateUrl="~/Items/Category.aspx"> Categories</asp:HyperLink></li> 
+                       <li class="divider"></li> 
+                       <li>  <asp:HyperLink ID="HyperLink15" runat="server"  NavigateUrl="~/People/Vendors.aspx"> Vendors</asp:HyperLink></li> 
+                                            
+                  </ul>
+                </li> 
+                 
+
+
+                <li class="dropdown">
+                  <a class="dropdown-toggle" runat="server" data-toggle="dropdown" href="#" ID="A2" >Customers <span class="caret"></span></a>
+                  <ul class="dropdown-menu" aria-labelledby="themes">    
+                      <li>  <asp:HyperLink ID="HyperLink5" runat="server" class="glyphicon glyphicon-plus" NavigateUrl="~/People/AddCustomer.aspx"> Add Customer </asp:HyperLink></li> 
+                      <li class="divider"></li>       
+                      <li>  <asp:HyperLink ID="HyperLink6" runat="server" class="glyphicon glyphicon-list" NavigateUrl="~/People/ManageCustomers.aspx"> Manage Customers </asp:HyperLink></li>                      
+                   </ul>
+                </li> 
+                
+              
+
+                <li class="dropdown">
+                  <a class="dropdown-toggle" runat="server" data-toggle="dropdown" href="#" ID="HlnkuserMenu" >Users <span class="caret"></span></a>
+                  <ul class="dropdown-menu" aria-labelledby="themes">    
+                      <li>  <asp:HyperLink ID="hlnkAdduser" runat="server" class="glyphicon glyphicon-plus" NavigateUrl="~/Users/Adduser.aspx"> Add user </asp:HyperLink></li> 
+                      <li class="divider"></li>       
+                      <li>  <asp:HyperLink ID="hlnkManageusers" runat="server" class="glyphicon glyphicon-list" NavigateUrl="~/Users/ManageUsers.aspx"> Manage users </asp:HyperLink></li>                      
+                   </ul>
+                </li>   
+               <li class="dropdown">
+                <a class="dropdown-toggle" runat="server" data-toggle="dropdown" href="#" ID="A3" >Reports <span class="caret"></span></a>
+                  <ul class="dropdown-menu" aria-labelledby="themes"> 
+                 <li> <asp:HyperLink   ID="hlnkReports" runat="server" NavigateUrl="~/Report/Reports.aspx">Reports </asp:HyperLink></li> 
+                 <li class="divider"></li> 
+                <li> <asp:HyperLink   ID="HyperLink13" runat="server" NavigateUrl="~/Report/WebOrders.aspx">Web Orders </asp:HyperLink></li> 
+                 <li class="divider"></li> 
+                <li> <asp:HyperLink   ID="HyperLink4" runat="server" NavigateUrl="~/Report/Report_GeneralLedger.aspx">General Ledger</asp:HyperLink></li> 
+                <li class="divider"></li> 
+                  <li> <asp:HyperLink   ID="HyperLink9" runat="server" NavigateUrl="~/Report/ChartReport.aspx">Chart Report </asp:HyperLink></li> 
+                   <li class="divider"></li> 
+                  <li> <asp:HyperLink   ID="HyperLink10" runat="server" NavigateUrl="~/Report/ReturnReports.aspx">Return Report</asp:HyperLink></li> 
+                 <li class="divider"></li> 
+                  <li class="dropdown-header">Receive Due Payment</li>
+                 <li> <asp:HyperLink  ID="HyperLink8"  NavigateUrl="~/Sales/DueList.aspx" runat="server" ToolTip="Sales" > Due list </asp:HyperLink></li> 
+                </ul>
+                </li>
+                
+          </ul>
+          
+    <%--      Right Part of the menu--%>
+               <ul class="nav navbar-nav navbar-right">    
+                    <li>  <a href="../Sales/KitchenDisplay.aspx" target="_blank">  <span class="badge">Kitchen Display</span></a>    </li>             
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="A1">                         
+                        <span class="glyphicon glyphicon-user" runat="server"></span>
+                        <asp:Label ID="lblusername" runat="server" Text="User Name"></asp:Label> <span class="caret" ></span></a>                       
+                        <ul class="dropdown-menu" aria-labelledby="themes">
+                            <li>  <asp:HyperLink ID="hlnkProfilePage" runat="server" class="glyphicon glyphicon-user" NavigateUrl="~/Others/ProfilePage.aspx"> Profile</asp:HyperLink></li>                 
+                            <li><a  class="glyphicon glyphicon-list" href="../Others/ShopList.aspx"> Terminal list</a></li>
+                            <li><a href="~/Others/TableZone.aspx" runat="server" class="glyphicon glyphicon-screenshot"> Table list</a></li>                         
+                            <li><a  class="glyphicon glyphicon-tasks" href="../Others/TaskList.aspx"> Task</a></li>  
+                            <li class="divider"></li>                                       
+                            <li><a href="~/Others/Settings.aspx" runat="server" class="glyphicon glyphicon-cog"> Settings</a></li> 
+                             <li><a href="~/Others/ResetDatabase.aspx" runat="server" class="glyphicon glyphicon-cloud"> Reset Database</a></li>                                 
+                            <li> <asp:LinkButton ID="LinklogOut" runat="server" class="glyphicon glyphicon-off"  OnClick="LinklogOut_Click" > Logout </asp:LinkButton> </li>               
+                        </ul>                  
+                    </li>               
+                </ul>
+
+        </div>
+      </div>       
+    </div>
+  
+       <center>    
+                    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                            <ProgressTemplate> 
+                              <div style="position: relative; top: 30%; text-align: center;" >
+                                <asp:Image  ID="Image1" runat="server" style="vertical-align: middle" 
+                                    alt="Loading..."  ImageUrl="~/images/preloader_small.gif"     />
+                            </div>                                     
+                            </ProgressTemplate>
+                    </asp:UpdateProgress> 
+ 
+             <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+
+                    <ContentTemplate>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> </asp:ContentPlaceHolder>                    
+                    </ContentTemplate>
+            </asp:UpdatePanel>
+        </center>
+    
+    </form>
+
+<%--   <div class="navbar navbar-default navbar-fixed-bottom" >
+      <div class="container" style=" text-align:center">    
+            Copyright © 2015 Point of Sale-  All Rights Reserved.<br /> Powered by - dynamicSoft 
+            <ul class="nav navbar-nav navbar-right">
+             <asp:Label ID="lbDate" runat="server" Text="Date"></asp:Label> 
+        
+            </ul>
+      </div>
+    </div> --%>
+    <script src="../BootStrapFiles/respond.min.js"></script>
+    <script src="../BootStrapFiles/jquery-1.js"></script>
+    <script src="../BootStrapFiles/bootstrap.js"></script>
+    <script src="../BootStrapFiles/bootswatch.js"></script>
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&"www.cloudflare.com/email-protection"==a.substr(7 ,35)){s='';j=43;r=parseInt(a.substr(j,2),16);for(j+=2;a.length-j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+   <script>       $("div.navbar-fixed-top").autoHidingNavbar();</script>
+</body>
+</html>
+

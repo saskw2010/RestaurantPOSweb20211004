@@ -1,0 +1,73 @@
+ 
+        TKinput.search-TKinput,TKinput.trans-search-TKinput{
+	    width:260px;
+	    margin:2px 10px 3px 10px;
+	    height:22px; 
+	    -moz-border-radius:3px 3px 3px 3px;
+	    padding:0
+	    }
+
+        combobox{
+	    width:260px;
+	    margin:2px 10px 3px 10px;
+	    height:29px; 
+	    -moz-border-radius:3px 3px 3px 3px;
+	    padding:0
+	    }
+	
+	
+        .th.search-hdr 
+        .aa-thtable-search TKinput-text{
+            margin:0;
+            padding:2px
+        }
+	
+        .TKinput{
+            color:#666;
+            border:1px solid #999;
+        }
+        .TKinput-checkbox,TKinput-radio{
+            border:0;
+            width:100px;
+            width:auto;
+        }
+        .TKinput-layout{
+            height:22px;
+            width:100px;
+            padding:2px;
+            color:#000;
+            font-size:12px
+        }
+        .TKinput-focus{
+            -webkit-border-radius:3px;
+            border-radius:5px;
+            -moz-border-radius:3px;
+            background-color: #fff;
+            /*border-radius:3px;
+            -moz-border-radius:3px;
+            outline: 0;
+            -webkit-box-shadow: solid;
+            box-shadow: inset;*/ 
+        }
+ 
+
+        .TKinputwidth-xsml{width:40px!important}
+        .TKinputwidth-sml{width:100px!important}
+        .TKinputwidth-med{width:150px!important}
+        .TKinputwidth-lrg{width:220px!important}
+        .TKinputwidth-lrg250{width:250px!important}
+        .TKinputwidth-lrg280{width:280px!important}
+        .TKinputwidth-xlrg{width:350px!important}
+        .TKinputwidth-xlrg380{width:380px!important}
+        .TKinputwidth-xlrg560{width:560px!important}
+        .TKinputwidth-accesscode{width:100px!important}
+        .TKinputwidth-2digit{width:20px!important}
+        .TKinputwidth-3digit{width:25px!important}
+        .TKinputwidth-4digit{width:30px!important}
+        .TKinputwidth-9digit{width:75px!important}
+        .TKinputwidth-15digit{width:125px!important}
+        .TKinputwidth-auto{width:auto!important}
+        .TKinputwidth-25pc{width:25%!important}
+        .TKinputwidth-50pc{width:50%!important}
+        .TKinputwidth-100pc{width:100%!important}
+ 
